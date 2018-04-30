@@ -1,21 +1,82 @@
-ARRAY
+Version 2 Function
 
-1. Place to store todos
+1. 
+
+makeTurkeySandwich 
+	Get one slice of bread.
+	Add  turkey.
+	Put a slice of bread on top.
+
+function makeTurkeySandwich (){
+	Get one slice of bread;
+	Add  turkey;
+	Put a slice of bread on top;
+}
+makeTurkeySandwich()
+
+2. Customizing functions 
+
+function makeSandwichWith (filling){
+	Get one slice of bread;
+	Add  filling;
+	Put a slice of bread on top;
+}
+makeSandwichWith()
+e.i. makeSandwichWith(ham)
+
+// console.log(makeSandwichWith(ham))
+
+3. More on customizing functions
+
+function sayHiTo(person){
+	console.log('hi', person);
+}
+
+4. It should have a function to display todos
 
 var todos = ['item 1', 'item 2', 'item 3'] 
 
-2. Way to display todos
+function displayTodos(){
+	console.log("My todos:", todos);	
+}
 
-console.log("My todos:", todos)
+displayTodos()
 
-3. Way to add new todos
+5. It should have a function to add todos
 
-todos.push('new todo')
+function addTodos(todo){
+	todos.push(todo);
+	displayTodos();
+}
 
-4. Way to change a todo
 
-todos[0]= 'Changed!' //changing the first item
+6. It should have a function to change todos
 
-5. Way to delete a todo
+function changeTodo(position, newValue){
+	todos[position] = 'newValue';
+	displayTodos();
+}
 
-todos.splice(0, 1) //deleting the first item
+changeTodo(0, 'changed')
+
+7. It should have a function to delete todos
+
+function deleteTodo(position){
+	todos.splice(position, 1);
+	displayTodos();
+}
+
+8. Observations
+
+var myName="Gordon";
+
+function sayName(){
+	console.log(myName);
+}
+
+//If you're inside of a function, you can look out and see data, but the opposite isn't true. If you're outside, you can't look in.
+
+9. Circles and arrows
+
+
+
